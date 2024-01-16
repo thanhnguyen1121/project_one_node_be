@@ -20,3 +20,12 @@ init sequelize:
 
     create model:
         npx sequelize-cli model:generate --name User --attributes firstName:string,lastName:string,email:string
+    
+    migrate table to database:
+        npx sequelize-cli db:migrate
+    
+    
+    create seeder:
+        npx sequelize-cli seed:generate --name demo-user
+    run seeder: 
+        npx sequelize-cli db:seed:all

@@ -5,6 +5,8 @@ let router = express.Router();
 
 let initWebRoutes = (app) => {
     router.get("/", webHomeCtrl.getWebHomePage)
+    router.get("/user_crud", webHomeCtrl.userCrud)
+    router.post("/create_user", webHomeCtrl.createUser)
     return app.use("/", router);
 }
 

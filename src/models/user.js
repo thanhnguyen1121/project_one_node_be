@@ -13,10 +13,18 @@ module.exports = (sequelize, DataTypes) => {
       // define association here
     }
   }
+
   User.init({
+    email: DataTypes.STRING,
+    password: DataTypes.STRING,
+    address: DataTypes.STRING,
+    phoneNumber: DataTypes.STRING,
+    gender: DataTypes.BOOLEAN,
     firstName: DataTypes.STRING,
     lastName: DataTypes.STRING,
-    email: DataTypes.STRING
+    roleId: DataTypes.STRING,
+    positionId: DataTypes.STRING,
+    image: DataTypes.STRING
   }, {
     sequelize,
     modelName: 'User',
